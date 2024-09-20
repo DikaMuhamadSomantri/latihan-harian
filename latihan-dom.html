@@ -1,0 +1,23 @@
+<form onsubmit="return tambah();">
+    <input type="number" id="myElement1" required>
+    <input type="number" id="myElement2" required>
+    <button type="submit">Change Text</button>
+  </form>
+  <div id="result"></div> <!-- Tempat untuk menampilkan hasil -->
+  
+  <script>
+    function tambah() {
+      const element1 = document.getElementById("myElement1").value;
+      const element2 = document.getElementById("myElement2").value;
+  
+      // Menjumlahkan nilai setelah mengonversi ke angka
+      const sum = Number(element1) + Number(element2);
+  
+      // Menampilkan hasil di elemen dengan ID 'result'
+      document.getElementById("result").innerHTML = "Hasil: " + sum;
+  
+      // Mencegah pengiriman form
+      return false;
+    }
+  </script>
+  
